@@ -5,10 +5,15 @@ import Products from "./pages/Products";
 import Navbar from "./components/navbar/navbar";
 import Shoppingcart from "./pages/Shoppingcart";
 import Shop from "./pages/Shop";
+import useHttp from "./hooks/useHttpGet";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useCallback } from "react";
 
 function App() {
+
   return (
-    <div>
+    <>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +22,7 @@ function App() {
         <Route path="Products" element={<Products />} />
         <Route path="Shoppingcart" element={<Shoppingcart />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
