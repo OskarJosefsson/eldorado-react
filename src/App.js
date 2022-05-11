@@ -7,8 +7,9 @@ import Shoppingcart from "./pages/Shoppingcart";
 import Shop from "./pages/Shop";
 
 function App() {
+
   return (
-    <div>
+    <>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +18,7 @@ function App() {
         <Route path="Products" element={<Products />} />
         <Route path="Shoppingcart" element={<Shoppingcart />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
