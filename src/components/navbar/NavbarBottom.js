@@ -1,10 +1,10 @@
 import React from "react";
 
-const navbarBottom = () => {
+const NavbarBottom = () => {
     return(  <React.Fragment>
 
         </React.Fragment>)
 ;
 };
 
-export default navbarBottom;
+export default NavbarBottom;

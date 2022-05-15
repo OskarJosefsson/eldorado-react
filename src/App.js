@@ -2,16 +2,14 @@ import { Routes, Route } from "react-router-dom";
 import Wishlist from "./pages/Wishlist";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Shoppingcart from "./pages/Shoppingcart";
 import Shop from "./pages/Shop";
 
-
 function App() {
-
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar ></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Shop" element={<Shop />} />
