@@ -43,7 +43,7 @@ const NavbarTop = ({ instance }) => {
         instance.removeEventCallback(callbackId);
       }
     };
-  }, []);
+  }, [instance]);
 
   const handleLogin = () => {
       instance.loginPopup(loginRequest)
