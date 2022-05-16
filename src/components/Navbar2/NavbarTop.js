@@ -1,5 +1,8 @@
 import { useEffect, React, Fragment } from "react";
-import { AuthenticatedTemplate, UnauthenticatedTemplate, MsalProvider } from "@azure/msal-react";
+import {
+  AuthenticatedTemplate,
+  UnauthenticatedTemplate,
+} from "@azure/msal-react";
 import { loginRequest, b2cPolicies } from "../../authConfig";
 import { EventType, InteractionType } from "@azure/msal-browser";
 import { Link } from "react-router-dom";
@@ -8,19 +11,26 @@ const NavbarTop = ({ instance }) => {
   useEffect(() => {
     const callbackId = instance.addEventCallback((event) => {
       if (event.eventType === EventType.LOGIN_FAILURE) {
-        if (event.error && event.error.errorMessage.indexOf("AADB2C90118") > -1) {
+        if (
+          event.error &&
+          event.error.errorMessage.indexOf("AADB2C90118") > -1
+        ) {
           if (event.interactionType === InteractionType.Redirect) {
             instance.loginRedirect(b2cPolicies.authorities.forgotPassword);
           } else if (event.interactionType === InteractionType.Popup) {
-            instance.loginPopup(b2cPolicies.authorities.forgotPassword)
-              .catch(e => {
+            instance
+              .loginPopup(b2cPolicies.authorities.forgotPassword)
+              .catch((e) => {
                 return;
               });
           }
         }
       }
 
-      if (event.eventType === EventType.LOGIN_SUCCESS || event.eventType === EventType.ACQUIRE_TOKEN_SUCCESS) {
+      if (
+        event.eventType === EventType.LOGIN_SUCCESS ||
+        event.eventType === EventType.ACQUIRE_TOKEN_SUCCESS
+      ) {
         if (event?.payload) {
           /**
            * We need to reject id tokens that were not issued with the default sign-in policy.
@@ -46,24 +56,30 @@ const NavbarTop = ({ instance }) => {
   }, [instance]);
 
   const handleLogin = () => {
-      instance.loginPopup(loginRequest)
-          .catch((error) => console.log(error))
+    instance.loginPopup(loginRequest).catch((error) => console.log(error));
   };
   return (
-    <MsalProvider instance={instance}>
-      <Fragment>
-        <Link to="/">Home</Link>
-        <Link to="/Wishlist">Wishlist</Link>
-        <Link to="/Shoppingcart">Shoppingcart</Link>
-        <Link to="/Products">Products</Link>
-        <UnauthenticatedTemplate>
-          <button onClick={handleLogin}>Login</button>
-        </UnauthenticatedTemplate>
-        <AuthenticatedTemplate>
-          <button onClick={() => instance.logoutPopup({postLogoutRedirectUri: "/",mainWindowRedirectUri: "/",})}>Logout</button>
-        </AuthenticatedTemplate>
-      </Fragment>
-    </MsalProvider>
+    <Fragment>
+      <Link to="/">Home</Link>
+      <Link to="/Wishlist">Wishlist</Link>
+      <Link to="/Shoppingcart">Shoppingcart</Link>
+      <Link to="/Products">Products</Link>
+      <UnauthenticatedTemplate>
+        <button onClick={handleLogin}>Login</button>
+      </UnauthenticatedTemplate>
+      <AuthenticatedTemplate>
+        <button
+          onClick={() =>
+            instance.logoutPopup({
+              postLogoutRedirectUri: "/",
+              mainWindowRedirectUri: "/",
+            })
+          }
+        >
+          Logout
+        </button>
+      </AuthenticatedTemplate>
+    </Fragment>
   );
 };
 

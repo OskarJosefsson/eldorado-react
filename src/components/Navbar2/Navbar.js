@@ -2,17 +2,12 @@ import React from "react";
 import NavbarTop from "./NavbarTop";
 import NavbarMid from "./NavbarMid";
 import NavbarBottom from "./NavbarBottom";
-import { PublicClientApplication } from '@azure/msal-browser';
-import { msalConfig } from '../../authConfig';
 
-const msalInstance = new PublicClientApplication(msalConfig);
-
-const Navbar = () => {
-
+const Navbar = ({ instance }) => {
   return (
     <React.Fragment>
       <div>
-        <NavbarTop instance={msalInstance}></NavbarTop>
+        <NavbarTop instance={instance}></NavbarTop>
       </div>
       <div>
         <NavbarMid></NavbarMid>

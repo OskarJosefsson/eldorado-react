@@ -5,11 +5,12 @@ import Products from "./pages/Products";
 import Navbar from "../src/components/Navbar2/Navbar";
 import Shoppingcart from "./pages/Shoppingcart";
 import Shop from "./pages/Shop";
+import { MsalProvider } from "@azure/msal-react";
 
-function App() {
+function App({ instance }) {
   return (
-    <>
-      <Navbar ></Navbar>
+    <MsalProvider instance={instance}>
+      <Navbar instance={instance}></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Shop" element={<Shop />} />
@@ -17,7 +18,7 @@ function App() {
         <Route path="Products" element={<Products />} />
         <Route path="Shoppingcart" element={<Shoppingcart />} />
       </Routes>
-    </>
+    </MsalProvider>
   );
 }
 
