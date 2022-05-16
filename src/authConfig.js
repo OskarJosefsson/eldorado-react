@@ -41,7 +41,7 @@ export const msalConfig = {
         clientId: "7f547446-ece9-44b5-9773-87eb29e9160a", // This is the ONLY mandatory field that you need to supply.
         authority: b2cPolicies.authorities.signUpSignIn.authority, // Choose SUSI as your default authority.
         knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
-        redirectUri: "http://localhost:3000/hello", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
+        redirectUri: "https://eldorado-shop.azurewebsites.net/", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
         postLogoutRedirectUri: "/", // Indicates the page to navigate after logout.
         navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
     },
@@ -80,8 +80,7 @@ export const msalConfig = {
  */
 export const protectedResources = {
     apiHello: {
-        // endpoint: "http://localhost:3000/hello",
-        endpoint: "https://localhost:44395/WeatherForecast",
+        // endpoint: "https://localhost:44395/WeatherForecast",
         scopes: ["https://azureADTomMastery.onmicrosoft.com/azureB2CAPI/fullAccess"], // e.g. api://xxxxxx/access_as_user
     },
 }
