@@ -1,35 +1,33 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState, useCallback } from "react";
 import classes from '../Products/ProductInfo.module.css';
+import useHttpGet  from '../../hooks/useHttpGet';
 
     const ProductList = () => {
         const [products, setProducts] = useState([])
 
-        const fetchData = async () => {
-          const res = await fetch("https://eldorado-development.azurewebsites.net/api/products")
+        const transformData = useCallback(async (Obj) => {
+          const listOfProducts = [];
+          Obj.forEach((element) => {
+            listOfProducts.push(element);
+          });
+      
+          setProducts(listOfProducts);
+        }, []);
 
-          if(!res.ok) {
-            throw new Error("Data could not be retrieved")
-          } else {
-            return res.json()
-          }
-        }
+        const {isLoading, error, sendRequest} = useHttpGet(transformData);
 
         useEffect(() => {
-          fetchData()
-            .then((res) => {
-              setProducts(res);
-            })
-            .catch((e) => {
-              console.log(e.message);
-            });
-        }, []);
+          sendRequest({url: "https://eldorado-development.azurewebsites.net/api/products"});
+        
+        }, [sendRequest])
+
 
         return (
           <Fragment>
             {products.map((item) => {
               return (
-                <section className={classes.infobox}>
-                  <div className={classes.heading}>{item.name}</div>
+                <section className={classes.infobox} key={item.id}>
+                  <div className={classes.heading} >{item.name}</div>
                   <div className={classes.description}>
                     {item.description}
                   </div>
