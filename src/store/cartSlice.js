@@ -28,8 +28,8 @@ const cartSlice = createSlice({
                 });
             }
         },
-        increment(state, {payload}){
-            return state.map((item) =>
+        increment(state, {payload}){           
+            return state.map((item) =>           
             item.id === payload
             ?{
                 ...item,
@@ -50,11 +50,18 @@ const cartSlice = createSlice({
         },
         clear(state){
             return [];
+        },
+        removeItem(state,{payload}){
+            
+            return state.filter((item) =>
+            item.id !== payload);
+
         }
+         
     }
 });
 
-export const { addToCart, increment, decrement, clear} = cartSlice.actions;
+export const { addToCart, increment, decrement, clear,removeItem} = cartSlice.actions;
 const cartReducer = cartSlice.reducer;
 
 export default cartReducer;
