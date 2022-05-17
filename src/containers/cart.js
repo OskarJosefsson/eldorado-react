@@ -1,4 +1,4 @@
-import { increment, clear, decrement } from "../store/cartSlice";
+import { increment, clear, decrement,removeItem } from "../store/cartSlice";
 import { cartTotalPriceSelector } from "../store/selectors";
 import {useDispatch, useSelector} from "react-redux";
 
@@ -28,7 +28,7 @@ const Cart = () => {
                             }}
                             >-</button>
                         </div>
-                        <div>{cartItem.quantity}</div>
+                        <span>{cartItem.quantity}</span> <span> <button disabled={cartItem.quantity === 0} onClick = {() => { dispatch(removeItem(cartItem.id))}}> X Remove item</button></span>
                         <div>
                             <button disabled={cartItem.quantity === 0} onClick ={()=>{
                                 dispatch(increment(cartItem.id));

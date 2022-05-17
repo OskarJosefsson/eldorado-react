@@ -13,7 +13,22 @@ const _products =   [
       "Expensive",
       "Cheap"
     ],
-    discountCoupon: 0}
+    discountCoupon: 0},
+    {id: 4,
+      name: "TEST",
+      description: "Very silky slims",
+      price: 10000,
+      categoryName: "Underwear",
+      subCategoryName: "AAAAAA",
+      sizeName: "XS",
+      brandName: "Lacoste",
+      colorName: "Red",
+      statusName: "In Stock",
+      tagNames: [
+        "Expensive",
+        "Cheap"
+      ],
+      discountCoupon: 0}
   ];
   
   export default _products;
