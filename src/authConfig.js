@@ -12,20 +12,20 @@ import { LogLevel } from "@azure/msal-browser";
  */
 export const b2cPolicies = {
     names: {
-        signUpSignIn: "B2C_1_SignIn_Up"
-        // forgotPassword: "b2c_1_reset",
-        // editProfile: "b2c_1_edit_profile"
+        signUpSignIn: "B2C_1_SignIn_Up",
+        // forgotPassword: "B2C_1_Edit",
+        editProfile: "B2C_1_Edit"
     },
     authorities: {
         signUpSignIn: {
             authority: "https://azureadtommastery.b2clogin.com/azureADTomMastery.onmicrosoft.com/B2C_1_SignIn_Up/",
         },
         // forgotPassword: {
-        //     authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_reset",
+        //     authority: "https://azureadtommastery.b2clogin.com/azureADTomMastery.onmicrosoft.com/B2C_1_Edit/",
         // },
-        // editProfile: {
-        //     authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_edit_profile"
-        // }
+        editProfile: {
+            authority: "https://azureadtommastery.b2clogin.com/azureADTomMastery.onmicrosoft.com/B2C_1_Edit/"
+        }
     },
     authorityDomain: "azureADTomMastery.b2clogin.com"
 }
@@ -41,7 +41,8 @@ export const msalConfig = {
         clientId: "7f547446-ece9-44b5-9773-87eb29e9160a", // This is the ONLY mandatory field that you need to supply.
         authority: b2cPolicies.authorities.signUpSignIn.authority, // Choose SUSI as your default authority.
         knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
-        redirectUri: "https://eldorado-shop.azurewebsites.net/", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
+        redirectUri: "http://localhost:3000",
+        // redirectUri: "https://eldorado-shop.azurewebsites.net/", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
         postLogoutRedirectUri: "/", // Indicates the page to navigate after logout.
         navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
     },
