@@ -5,9 +5,6 @@ const Wishlist = () => {
 
   const { instance, accounts, inProgress } = useMsal();
   const account = useAccount(accounts[0] || {});
-
-
- 
    var token = instance.acquireTokenSilent({
         scopes: protectedResources.apiHello.scopes,
         account: account
