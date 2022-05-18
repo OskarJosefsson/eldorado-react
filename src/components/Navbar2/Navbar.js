@@ -15,7 +15,7 @@ const Navbar = ({ instance }) => {
       <div>
         <NavbarBottom></NavbarBottom>
       </div>
-      <Header/>
+    
     </React.Fragment>
   );
 };
