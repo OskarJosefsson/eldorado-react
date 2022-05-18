@@ -1,12 +1,5 @@
-import { Fragment} from "react";
-import ProductList from "../components/Shop/ProductList";
-
-
+import React from "react";
 const Shop = () => {
-  return (
-    <Fragment>
-      <ProductList/>
-    </Fragment>
-  );
+  return <React.Fragment></React.Fragment>;
 };
 export default Shop;
