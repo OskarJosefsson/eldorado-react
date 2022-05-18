@@ -1,7 +1,5 @@
 import React from "react";
-
-const navbarMid = () => {
+const Login = () => {
   return <React.Fragment></React.Fragment>;
 };
-
-export default navbarMid;
+export default Login;
