@@ -5,12 +5,11 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
-import { PublicClientApplication } from '@azure/msal-browser';
+import { PublicClientApplication } from "@azure/msal-browser";
 import { msalConfig } from "./authConfig";
 
-const msalInstance = new PublicClientApplication(msalConfig);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const msalInstance = new PublicClientApplication(msalConfig);
 root.render(
   <BrowserRouter>
     <React.StrictMode>
