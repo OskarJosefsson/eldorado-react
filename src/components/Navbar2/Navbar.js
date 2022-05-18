@@ -7,14 +7,15 @@ const Navbar = ({ instance }) => {
   return (
     <React.Fragment>
       <div>
-        <NavbarTop instance={instance}></NavbarTop>
+        <NavbarTop ></NavbarTop>
       </div>
       <div>
-        <NavbarMid></NavbarMid>
+        <NavbarMid instance={instance}></NavbarMid>
       </div>
       <div>
         <NavbarBottom></NavbarBottom>
       </div>
+      <Header/>
     </React.Fragment>
   );
 };

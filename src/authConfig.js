@@ -11,25 +11,25 @@ import { LogLevel } from "@azure/msal-browser";
  * To learn more about custom policies, visit: https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-overview
  */
 export const b2cPolicies = {
-  names: {
-    signUpSignIn: "B2C_1_SignIn_Up",
-    // forgotPassword: "b2c_1_reset",
-    // editProfile: "b2c_1_edit_profile"
-  },
-  authorities: {
-    signUpSignIn: {
-      authority:
-        "https://azureadtommastery.b2clogin.com/azureADTomMastery.onmicrosoft.com/B2C_1_SignIn_Up/",
+    names: {
+        signUpSignIn: "B2C_1_SignIn_Up",
+        // forgotPassword: "B2C_1_Edit",
+        editProfile: "B2C_1_Edit"
     },
-    // forgotPassword: {
-    //     authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_reset",
-    // },
-    // editProfile: {
-    //     authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_edit_profile"
-    // }
-  },
-  authorityDomain: "azureADTomMastery.b2clogin.com",
-};
+    authorities: {
+        signUpSignIn: {
+            authority: "https://azureadtommastery.b2clogin.com/azureADTomMastery.onmicrosoft.com/B2C_1_SignIn_Up/",
+        },
+        // forgotPassword: {
+        //     authority: "https://azureadtommastery.b2clogin.com/azureADTomMastery.onmicrosoft.com/B2C_1_Edit/",
+        // },
+        editProfile: {
+            authority: "https://azureadtommastery.b2clogin.com/azureADTomMastery.onmicrosoft.com/B2C_1_Edit/"
+        }
+    },
+    authorityDomain: "azureADTomMastery.b2clogin.com"
+}
+
 
 /**
  * Configuration object to be passed to MSAL instance on creation.

@@ -8,12 +8,12 @@ import { useEffect } from 'react';
 const ProductInfo = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
+
   useEffect(() => {
     dispatch((fetchProducts()));
-  console.log(products.list);
+    // console.log(products.list);
   }, [dispatch]);
-  
-  
+
   return (
     <Fragment>
       <section className={classes.infobox}>
@@ -30,10 +30,7 @@ const ProductInfo = () => {
      </div>
      </section>
     </Fragment>
-  )
-  
-        
-
+  );
 };
 
 export default ProductInfo;
