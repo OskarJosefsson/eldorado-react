@@ -32,7 +32,7 @@ const useHttp = (applyData) => {
                  "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`,
                },
-          body: props.body ? JSON.stringify(props.body) : {},
+          body: props.body ? JSON.stringify(props.body) : null,
         });
         if (!result.ok) {
           throw new Error("Request failed");
