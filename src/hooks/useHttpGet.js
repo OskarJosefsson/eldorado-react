@@ -24,16 +24,27 @@ const useHttp = (applyData) => {
         return token.accessToken;
       }
       try {
-
-        const token = await getInstance();
-        const result = await fetch(props.url, {
-          method: props.method ? props.method : "GET",
-          headers: props.headers ? props.headers :  {
-                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`,
-               },
-          body: props.body ? JSON.stringify(props.body) : null,
-        });
+        let result;
+        if (account != null){
+          
+          const token = await getInstance();
+          result = await fetch(props.url, {
+            method: props.method ? props.method : "GET",
+            headers: props.headers ? props.headers :  {
+                   "Content-Type": "application/json",
+                  "Authorization": `Bearer ${token}`,
+                 },
+            body: props.body ? JSON.stringify(props.body) : null,
+          });
+        }
+        else {
+          
+          result = await fetch(props.url, {
+            method: props.method ? props.method : "GET",
+            headers: props.headers ? props.headers :  {},
+            body: props.body ? JSON.stringify(props.body) : null,
+          });
+        }
         if (!result.ok) {
           throw new Error("Request failed");
         }
