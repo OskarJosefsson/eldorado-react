@@ -1,6 +1,8 @@
 import { Fragment, useEffect, useState, useCallback } from "react";
 import classes from '../Products/ProductInfo.module.css';
 import useHttpGet  from '../../hooks/useHttpGet';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/cartSlice";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -22,6 +24,8 @@ const ProductList = () => {
     });
   }, [sendRequest]);
 
+  const dispatch = useDispatch();
+
   return (
     <Fragment>
       {products.map((item) => {
@@ -31,7 +35,6 @@ const ProductList = () => {
             <div className={classes.description}>{item.description}</div>
             <hr></hr>
             <div className={classes.price}>${item.price}</div>
-            <button className={classes.btn}>Add to cart</button>
             <div>
               Category: <span className={classes.cat}>{item.categoryName}</span>
             </div>
@@ -42,6 +45,16 @@ const ProductList = () => {
                   {x}
                 </span>
               ))}
+            </div>
+            <div>
+              <button
+                onClick={() => {
+                  dispatch(addToCart(item));
+                }}
+              >
+                {" "}
+                Add
+              </button>
             </div>
           </section>
         );
