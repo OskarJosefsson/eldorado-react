@@ -1,0 +1,24 @@
+.info {
+    background-color: #F6F6F6;
+    width: 20em;
+    border-radius: 5px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    margin-top: 1em;
+}
+
+.btn {
+    border: none;
+    border-radius: 15px;
+    background-color: #20D3C2;
+    color: white;
+    padding: 0.6em;
+    margin-right: 0.5em;
+}
+
+.btn:hover {
+    background-color: #0f655c;
+    cursor: pointer;
+}
