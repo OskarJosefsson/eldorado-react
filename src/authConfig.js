@@ -42,6 +42,7 @@ export const msalConfig = {
     authority: b2cPolicies.authorities.signUpSignIn.authority, // Choose SUSI as your default authority.
     knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
     redirectUri: "https://eldorado-shop.azurewebsites.net/",
+    // redirectUri: "http://localhost:3000/",
     // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
     postLogoutRedirectUri: "/", // Indicates the page to navigate after logout.
     navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
