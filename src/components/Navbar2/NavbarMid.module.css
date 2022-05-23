@@ -1,8 +1,9 @@
-.navmid {
-    height: 5em;
-    border-bottom: 1px solid #E9E9E9;
+.title {
+   font-size: xx-large;
+   color: #20D3C2;
+   margin-left: 14rem;
 }
-
 .myacc {
    cursor: pointer; 
+   margin-left: 70rem;
 }

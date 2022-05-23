@@ -1,0 +1,25 @@
+.links{
+    margin-left: 13rem;
+    display: flex;
+}
+
+.link{
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.link:visited{
+    color: black;
+}
+.linkcategory {
+    background-color:#20D3C2;
+    text-decoration: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.linkcategory:visited 
+{
+color: black;
+}
+
+
