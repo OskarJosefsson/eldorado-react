@@ -20,16 +20,10 @@ import ProductInfo from "../components/Products/ProductInfo";
 // }
 
 const Products = () => {
-<<<<<<< HEAD
-  return <React.Fragment>
-    
-  </React.Fragment>;
-=======
   return (
     <Fragment>
         <ProductInfo  />
     </Fragment>
     );
->>>>>>> development
 };
 export default Products;
