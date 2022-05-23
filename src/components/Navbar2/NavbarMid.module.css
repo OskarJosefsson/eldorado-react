@@ -1,6 +1,19 @@
 .navmid {
     height: 5em;
     border-bottom: 1px solid #E9E9E9;
+
+}
+
+.title {
+    font-size: large;
+    color: rgb(3, 3, 3);
+    margin-left: 5cm;
+}
+
+
+
+.navbottom {
+    background-color: #20D3C2;
 }
 
 .myacc {

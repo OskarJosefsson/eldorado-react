@@ -1,16 +1,18 @@
 import { React, Fragment } from "react";
 import { Link } from "react-router-dom";
-
+import classes from './NavbarMid.module.css';
 const NavbarBottom = () => {
 
     return (
         <Fragment>
-          <Link to="/">Home</Link>
-          <Link to="/Shop">Shop</Link>
-          <Link to="/Products">Products</Link>
-          <Link to="/Wishlist">Wishlist</Link>
-          <Link to="/Shoppingcart">Shoppingcart</Link>
-        </Fragment>
+          <div className={classes.navbottom} >
+          <Link to="/" className={classes.link}>Home</Link>
+          <Link to="/Shop" className={classes.link}>Shop</Link>
+          <Link to="/Products" className={classes.link}>Products</Link>
+          <Link to="/Shoppingcart" className={classes.link}>Shoppingcart</Link>
+          </div>
+          </Fragment>
+
     );
 };
 
