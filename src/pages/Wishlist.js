@@ -1,5 +1,8 @@
 import React from "react";
+
+
 const Wishlist = () => {
+
   return (
     <React.Fragment>
       <div>Wishlist</div>
