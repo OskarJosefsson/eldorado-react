@@ -2,8 +2,13 @@
    font-size: xx-large;
    color: #20D3C2;
    margin-left: 14rem;
+   text-decoration: none;
 }
 .myacc {
    cursor: pointer; 
    margin-left: 70rem;
+}
+
+.myacc:hover {
+color:#20D3C2 ;
 }

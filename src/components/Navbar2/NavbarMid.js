@@ -55,9 +55,9 @@ const NavbarMid = ({ instance }) => {
 
     <>
 
-      <p className={classes.title}>Kenkata</p>
+      <Link to="/" className={classes.title}>Kenkata</Link>
       <UnauthenticatedTemplate>
-        <button className={classes.myacc} onClick={handleLogin}>Login</button>
+        <div className={classes.myacc} onClick={handleLogin}>Login</div>
       </UnauthenticatedTemplate>
       <AuthenticatedTemplate>
         <Link  className={classes.myacc} to="/Account">My account</Link>

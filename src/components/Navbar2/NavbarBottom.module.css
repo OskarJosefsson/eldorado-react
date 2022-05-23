@@ -8,9 +8,15 @@
     margin-left: 1rem;
 }
 
+
 .link:visited{
     color: black;
 }
+
+.link:hover {
+    color:#20D3C2 ;
+    }
+
 .linkcategory {
     background-color:#20D3C2;
     text-decoration: none;
@@ -21,5 +27,8 @@
 {
 color: black;
 }
-
+.linkcategory:hover 
+{
+background-color:#EEFCFA;
+}
 
