@@ -1,5 +1,4 @@
-import { useAccount, useMsal } from "@azure/msal-react";
-import { useEffect, useState } from "react";
+import { useMsal } from "@azure/msal-react";
 import { b2cPolicies } from "../authConfig";
 
 import classes from "./Account.module.css";
@@ -8,11 +7,10 @@ const Account = () => {
   const { instance, accounts } = useMsal();
   const { name, username } = accounts[0];
   const { streetAddress, postalCode, city} = accounts[0].idTokenClaims;
-  const [ user, setUser ] = useState({});
 
   return (
     <div className={classes.info}>
-        <strong>{user.name}</strong>
+        <strong>{name}</strong>
         <p><strong>Email:</strong> {username}</p>
         <p><strong>Street:</strong> {streetAddress}</p>
         <p><strong>Postal Code:</strong> {postalCode}</p>
