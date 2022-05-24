@@ -1,12 +1,33 @@
-.title {
+.navbarmid{
+   display: flex;
+   width: 100%;
+   height: 2cm;
+}
+
+.title 
+{
    font-size: xx-large;
    color: #20D3C2;
    margin-left: 14rem;
    text-decoration: none;
 }
+
+.left {
+   margin-top: 0.5em;
+   width: 33%;
+}
+
+.right {
+   margin-left: 30em;
+   margin-top: 1.5em;
+   width: 66%;
+}
+
 .myacc {
+
    cursor: pointer; 
-   margin-left: 70rem;
+   text-align: center;
+
 }
 
 .myacc:hover {
