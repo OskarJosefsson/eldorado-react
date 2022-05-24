@@ -1,21 +1,30 @@
-.links{
-    margin-left: 13rem;
+.navbot{
+    width: 100%;
     display: flex;
+
 }
+
+.links{
+    margin-left: 13em;
+    display: flex;
+    width: 33%;
+    justify-content: space-between;
+}
+
 
 .link{
     text-decoration: none;
-    margin-left: 1rem;
+    position: relative;
 }
-
 
 .link:visited{
     color: black;
 }
 
-.link:hover {
+.link:hover 
+{
     color:#20D3C2 ;
-    }
+}
 
 .linkcategory {
     background-color:#20D3C2;
@@ -23,10 +32,12 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
 .linkcategory:visited 
 {
 color: black;
 }
+
 .linkcategory:hover 
 {
 background-color:#EEFCFA;

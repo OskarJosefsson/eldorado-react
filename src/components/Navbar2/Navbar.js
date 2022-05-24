@@ -7,6 +7,7 @@ import classes from "./Navbar.module.css"
 const Navbar = ({ instance }) => {
   return (
     <React.Fragment>
+      
       <div className={classes.navbartop} >
         <NavbarTop ></NavbarTop>
       </div>
@@ -16,6 +17,7 @@ const Navbar = ({ instance }) => {
       <div className={classes.navbarbot}>
         <NavbarBottom></NavbarBottom>
       </div>
+
     </React.Fragment>
   );
 };

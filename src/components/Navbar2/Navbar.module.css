@@ -1,24 +1,20 @@
+
 .navbarTop {
-    display: flex;
-    align-items: center;
+
     background-color:#20D3C2 ;
 }
+
 .navbarmid {
+
+    align-items: center;
+    background-color:white;
     border-top: black;
     border-width: 0.01cm;
     border-top-style:solid;
-    display: flex;
-    background-color:white;
-    justify-content: start;
-    height: 2cm;
-    align-items: center;
   
 }
 .navbarbot
 {
-    display: flex;
-    align-items: center;
     background-color:#ffffff;
-    justify-content: center;
-    margin-right: 55rem;
 }
+

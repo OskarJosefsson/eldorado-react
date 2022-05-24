@@ -25,8 +25,7 @@ export const msalConfig = {
     clientId: "7f547446-ece9-44b5-9773-87eb29e9160a",
     authority: b2cPolicies.authorities.signUpSignIn.authority,
     knownAuthorities: [b2cPolicies.authorityDomain],
-     redirectUri: "https://eldorado-shop.azurewebsites.net/",
-   
+    redirectUri: "https://eldorado-shop.azurewebsites.net/",
     postLogoutRedirectUri: "/",
     navigateToLoginRequestUrl: false,
   },

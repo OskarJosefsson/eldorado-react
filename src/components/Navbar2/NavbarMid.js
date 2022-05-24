@@ -54,17 +54,20 @@ const NavbarMid = ({ instance }) => {
   return (
 
     <>
-
+    <div className={classes.navbarmid}>
+      <div className={classes.left}>
       <Link to="/" className={classes.title}>Kenkata</Link>
+      </div>
+      <div className={classes.right}>
       <UnauthenticatedTemplate>
         <div className={classes.myacc} onClick={handleLogin}>Login</div>
       </UnauthenticatedTemplate>
       <AuthenticatedTemplate>
         <Link  className={classes.myacc} to="/Account">My account</Link>
       </AuthenticatedTemplate>
+      </div>
 
-
- 
+    </div>
     </>
 
 
