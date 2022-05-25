@@ -3,6 +3,7 @@ import { AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-reac
 import { loginRequest, b2cPolicies } from "../../authConfig";
 import { EventType, InteractionType } from "@azure/msal-browser";
 import { Link } from "react-router-dom";
+import image from '../../pictures/kenkata.PNG';
 import classes from './NavbarMid.module.css';
 
 const NavbarMid = ({ instance }) => {
@@ -56,7 +57,7 @@ const NavbarMid = ({ instance }) => {
     <>
     <div className={classes.navbarmid}>
       <div className={classes.left}>
-      <Link to="/" className={classes.title}>Kenkata</Link>
+      <Link to="/" className={classes.title}><img className={classes.kenkata} src={image} alt="kenkata " /></Link>
       </div>
       <div className={classes.right}>
       <UnauthenticatedTemplate>

@@ -1,8 +1,10 @@
 import { Fragment, useEffect, useState, useCallback } from "react";
-import classes from '../Products/ProductInfo.module.css';
+import classes from './ProductlList.module.css';
 import useHttpGet  from '../../hooks/useHttpGet';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
+import { Link } from "react-router-dom";
+import LoadingSpinner from "../UI/LoadingSpinner";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -28,10 +30,11 @@ const ProductList = () => {
 
   return (
     <Fragment>
+      {isLoading && <LoadingSpinner/>}
       {products.map((item) => {
         return (
           <section className={classes.infobox} key={item.id}>
-            <div className={classes.heading}>{item.name}</div>
+            <Link to="/Products" state={{from: item}} className={classes.heading}>{item.name}</Link>
             <div className={classes.description}>{item.description}</div>
             <hr></hr>
             <div className={classes.price}>${item.price}</div>
