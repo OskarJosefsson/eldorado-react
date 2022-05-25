@@ -2,6 +2,7 @@
    display: flex;
    width: 100%;
    height: 2cm;
+   border-bottom: 1px solid #DBDEE0;
 }
 
 .title 
@@ -32,4 +33,10 @@
 
 .myacc:hover {
 color:#20D3C2 ;
+}
+
+.kenkata {
+   width: 5em;
+   margin-left: -.6em;
+   margin-top: .3em;
 }
