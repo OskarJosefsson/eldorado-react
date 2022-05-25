@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState, useCallback } from "react";
-import classes from './ProductlList.module.css';
+import classes from './ProductList.module.css';
 import useHttpGet  from '../../hooks/useHttpGet';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
@@ -34,30 +34,17 @@ const ProductList = () => {
       {products.map((item) => {
         return (
           <section className={classes.infobox} key={item.id}>
+            <div className={classes.wrapHeading}>
             <Link to="/Products" state={{from: item}} className={classes.heading}>{item.name}</Link>
+            </div>
             <div className={classes.description}>{item.description}</div>
-            <hr></hr>
+            <div className={classes.infoContainer}>
             <div className={classes.price}>${item.price}</div>
-            <div>
-              Category: <span className={classes.cat}>{item.categoryName}</span>
+            <div className={classes.catAndTag}>Category: <span className={classes.cat}>{item.categoryName}</span>
+            <div>Tags:{" "}{item.tagNames.map((x) => (<span key={x} className={classes.tag}>{x}</span>))}</div>
             </div>
-            <div>
-              Tags:{" "}
-              {item.tagNames.map((x) => (
-                <span key={x} className={classes.tag}>
-                  {x}
-                </span>
-              ))}
+            <div><button className={classes.btn}onClick={() => {dispatch(addToCart(item));}}>{" "}Add</button>
             </div>
-            <div>
-              <button
-                onClick={() => {
-                  dispatch(addToCart(item));
-                }}
-              >
-                {" "}
-                Add
-              </button>
             </div>
           </section>
         );
