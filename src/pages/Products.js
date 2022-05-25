@@ -11,15 +11,21 @@ const Products = () => {
   const product = {id, name, price, quantity: 1 };
   return (
     <Fragment>
+      <div className={classes.wrapProduct}>
         <section className={classes.infobox}>
+        <div className={classes.wrapHeading}>
           <div className={classes.heading} key={id}>{name}</div>
+          </div>
           <div className={classes.description}>{description}</div>
-          <hr></hr>
+          <div className={classes.infoContainer}>
           <div className={classes.price}>${price}</div>
           <button className={classes.btn} onClick={() => {dispatch(addToCart(product));}}>Add to cart</button>
-        <div>Category:{" "}<span className={classes.cat}>{categoryName}</span></div> 
+        <div className={classes.catAndTag}>Category:{" "}<span className={classes.cat}>{categoryName}</span>
         <div>Tags:{" "}{tagNames.map((x) => (<span key={x} className={classes.tag}>{x}</span>))}</div> 
+        </div>
+        </div> 
         </section>
+        </div>
     </Fragment>
     );
 };
