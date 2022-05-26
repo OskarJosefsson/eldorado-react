@@ -57,7 +57,12 @@ const NavbarMid = ({ instance }) => {
     <>
     <div className={classes.navbarmid}>
       <div className={classes.left}>
-      <Link to="/" className={classes.title}><img className={classes.kenkata} src={image} alt="kenkata " /></Link>
+      <Link to="/"><img className={classes.kenkata} src={image} alt="kenkata " /></Link>
+      </div>
+      <div className={classes.mid}>
+        <input className={classes.midinput} placeholder="Search products..." />
+        <div className={classes.middrop}>Categories</div>
+        <button className={classes.midbtn}>Q</button>
       </div>
       <div className={classes.right}>
       <UnauthenticatedTemplate>

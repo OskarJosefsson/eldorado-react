@@ -1,42 +1,65 @@
 .navbarmid{
-   display: flex;
    width: 100%;
-   height: 2cm;
+   height: 4.7em;
+   display: flex;
+   justify-content: space-between;
    border-bottom: 1px solid #DBDEE0;
 }
 
-.title 
-{
-   font-size: xx-large;
-   color: #20D3C2;
-   margin-left: 14rem;
-   text-decoration: none;
-}
-
 .left {
-   margin-top: 0.5em;
+   margin-top: 1em;
    width: 33%;
 }
 
 .right {
-   margin-left: 30em;
    margin-top: 1.5em;
    width: 66%;
 }
 
 .myacc {
-
    cursor: pointer; 
    text-align: center;
-
 }
 
 .myacc:hover {
-color:#20D3C2 ;
+   color:#20D3C2;
 }
 
 .kenkata {
    width: 5em;
-   margin-left: -.6em;
-   margin-top: .3em;
+   margin-left: 6.3em;
+   font-size: xx-large;
+}
+
+.mid {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-left: 5em;
+}
+
+.midinput {
+   height: 2em;
+   width: 20em;
+   margin-top: 1.5em;
+   border-radius: 20px 0px 0px 20px;
+   border: 1px solid #DBDEE0;
+}
+
+.middrop {
+   height: 1.8em;
+   margin-top: 1.25em;
+   padding-left: .5em;
+   padding-right: .5em;
+   border: 1px solid #DBDEE0;
+}
+
+.midbtn {
+   height: 2.34em;
+   width: 2.5em;
+   margin-top: 1.46em;
+   margin-left: -.1em;
+   background-color: #20D3C2;
+   border-radius: 0px 20px 20px 0px;
+   border: 1px solid #DBDEE0;
 }
