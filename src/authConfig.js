@@ -22,7 +22,7 @@ export const b2cPolicies = {
 
 export const msalConfig = {
   auth: {
-    clientId: "7f547446-ece9-44b5-9773-87eb29e9160a",
+    clientId: "0bd812ca-dab7-44fc-9ad1-62656bcccac2",
     authority: b2cPolicies.authorities.signUpSignIn.authority,
     knownAuthorities: [b2cPolicies.authorityDomain],
     // redirectUri: "http://localhost:3000/",
