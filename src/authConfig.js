@@ -26,7 +26,7 @@ export const msalConfig = {
     authority: b2cPolicies.authorities.signUpSignIn.authority,
     knownAuthorities: [b2cPolicies.authorityDomain],
     // redirectUri: "http://localhost:3000/",
-    redirectUri: "https://eldorado-shop.azurewebsites.net/",
+    redirectUri: "https://eldorado-production.azurewebsites.net",
     postLogoutRedirectUri: "/",
     navigateToLoginRequestUrl: false,
   },

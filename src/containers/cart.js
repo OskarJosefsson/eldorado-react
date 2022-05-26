@@ -28,7 +28,7 @@ const Cart = () => {
       addressId: addressId,
       details: detailsList,
     };
-    await fetch("https://eldorado-development.azurewebsites.net/api/orders", {
+    await fetch("https://eldoradoapi-production.azurewebsites.net/api/orders", {
       method: "POST",
       body: JSON.stringify(customer),
       headers: {
@@ -38,7 +38,7 @@ const Cart = () => {
   };
   const CheckOut = async () => {
     const req = await fetch(
-      `https://eldorado-development.azurewebsites.net/api/Address/(id)(customerId)?customer=${account.username}`
+      `https://eldoradoapi-production.azurewebsites.net/api/Address/(id)(customerId)?customer=${account.username}`
     );
    
       
@@ -51,7 +51,7 @@ const Cart = () => {
         city,
         postalCode,
       };
-      await fetch("https://eldorado-development.azurewebsites.net/api/Address", {
+      await fetch("https://eldoradoapi-production.azurewebsites.net/api/Address", {
         method: "POST",
         body: JSON.stringify(address),
         headers: {
@@ -59,7 +59,7 @@ const Cart = () => {
         },
       });
       const newAddress = await fetch(
-        `https://eldorado-development.azurewebsites.net/api/Address/(id)(customerId)?customer=${account.username}`
+        `https://eldoradoapi-production.azurewebsites.net/api/Address/(id)(customerId)?customer=${account.username}`
       );
       const response = await newAddress.json();
       

@@ -22,7 +22,7 @@ const ProductList = () => {
 
   useEffect(() => {
     sendRequest({
-      url: "https://eldorado-development.azurewebsites.net/api/products",
+      url: "https://eldoradoapi-production.azurewebsites.net/api/products",
     });
   }, [sendRequest]);
 
