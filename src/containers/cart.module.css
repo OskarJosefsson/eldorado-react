@@ -1,0 +1,56 @@
+/* itemName, amountPerItem, decrement,increment,quantity,removeItem,clear,totalprice */
+
+.container{
+display: flex;
+justify-content: center;
+
+}
+
+.cartItems{
+    
+  
+}
+
+.font{
+    font-size: large;
+    font-weight: bold;
+}
+
+.priceColor{
+    color: #4fc7bd;
+}
+.sidebarshipping{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+    align-items: flex-start;
+    
+}
+.checkoutbtn{
+   margin-top: 1rem;
+   margin-left: 4rem;
+   border-radius: 16%;
+   background-color: #4fc7bd;
+   color: white;
+}
+.totalsBar{
+    text-align: center;
+    font-size: x-large;
+    height: 2rem;
+    background-color: #0e153d;
+    color: #5cdfd3;
+}
+.item{
+   
+    
+}
+.productinfo{
+
+}
+
+.sidebar{
+ border: 1px solid black;
+ border-radius: 2%;
+}
