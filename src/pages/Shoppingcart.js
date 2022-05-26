@@ -1,16 +1,5 @@
-import React, { Fragment } from "react";
-import Cart from "../containers/cart";
+import React from "react";
 const Shoppingcart = () => {
-  return (
-    <Fragment>
-      <div>
-        
-        <div>
-          <Cart/>
-        </div>
-      </div>
-      </Fragment>
- 
-  )
+  return <React.Fragment></React.Fragment>;
 };
 export default Shoppingcart;
